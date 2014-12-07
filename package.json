@@ -1,0 +1,20 @@
+{
+    "name": "gumroad-api",
+    "version": "0.0.0",
+    "main": "lib/index.js",
+    "author": "Samy Pessé <samypesse@gmail.com>",
+    "description": "Client for the Gumroad API.",
+    "bugs": "https://github.com/SamyPesse/gumroad-api/issues",
+    "engines": {
+        "node": ">=0.6"
+    },
+    "dependencies": {
+        "lodash": "^2.4",
+        "q": "^0.9",
+        "request": "^2.34"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SamyPesse/gumroad-api.git"
+    }
+}
