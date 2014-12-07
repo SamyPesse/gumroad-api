@@ -15,7 +15,7 @@ var gumroad = new Publisher({
 ### List products
 
 ```js
-publisher.listProducts()
+gumroad.listProducts()
 .then(function(products) {
     ...
 });
