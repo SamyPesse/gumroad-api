@@ -81,3 +81,13 @@ gumroad.deleteProduct("my-product-id")
     ...
 });
 ```
+
+### Verify a license key
+
+```js
+gumroad.verifyLicense("my-product-id", "license-key")
+.then(function() {
+    ...
+});
+```
+
