@@ -47,6 +47,30 @@ gumroad.getProduct("my-product-id")
 });
 ```
 
+### Update a product
+
+Reference: https://gumroad.com/api#products
+
+```js
+gumroad.updateProduct("my-product-id", {
+	// infos
+})
+.then(function(product) {
+    ...
+});
+```
+
+### Enable/disable a product
+
+Reference: https://gumroad.com/api#products
+
+```js
+gumroad.toggleProduct("my-product-id", false)
+.then(function(product) {
+    // product is disabled
+});
+```
+
 ### Delete a product
 
 Reference: https://gumroad.com/api#products
