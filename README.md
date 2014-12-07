@@ -35,3 +35,14 @@ gumroad.createProduct({
     ...
 });
 ```
+
+### Retrieve a product
+
+Reference: https://gumroad.com/api#products
+
+```js
+gumroad.getProduct("my-product-id")
+.then(function(product) {
+    ...
+});
+```
