@@ -14,9 +14,24 @@ var gumroad = new Publisher({
 
 ### List products
 
+Reference: https://gumroad.com/api#products
+
 ```js
 gumroad.listProducts()
 .then(function(products) {
+    ...
+});
+```
+
+### Create a product
+
+Reference: https://gumroad.com/api#products
+
+```js
+gumroad.createProduct({
+	"name": "..."
+})
+.then(function(product) {
     ...
 });
 ```
