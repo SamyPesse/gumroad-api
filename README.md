@@ -46,3 +46,14 @@ gumroad.getProduct("my-product-id")
     ...
 });
 ```
+
+### Delete a product
+
+Reference: https://gumroad.com/api#products
+
+```js
+gumroad.deleteProduct("my-product-id")
+.then(function() {
+    ...
+});
+```
