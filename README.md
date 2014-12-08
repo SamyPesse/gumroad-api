@@ -12,9 +12,11 @@ var gumroad = new Publisher({
 });
 ```
 
-### List products
+## Products
 
 Reference: https://gumroad.com/api#products
+
+#### List products
 
 ```js
 gumroad.listProducts()
@@ -23,9 +25,7 @@ gumroad.listProducts()
 });
 ```
 
-### Create a product
-
-Reference: https://gumroad.com/api#products
+#### Create a product
 
 ```js
 gumroad.createProduct({
@@ -36,9 +36,7 @@ gumroad.createProduct({
 });
 ```
 
-### Retrieve a product
-
-Reference: https://gumroad.com/api#products
+#### Retrieve a product
 
 ```js
 gumroad.getProduct("my-product-id")
@@ -47,47 +45,102 @@ gumroad.getProduct("my-product-id")
 });
 ```
 
-### Update a product
-
-Reference: https://gumroad.com/api#products
+#### Update a product
 
 ```js
 gumroad.updateProduct("my-product-id", {
 	// infos
 })
 .then(function(product) {
-    ...
+    // Product has been updated
 });
 ```
 
-### Enable/disable a product
-
-Reference: https://gumroad.com/api#products
+#### Enable/disable a product
 
 ```js
 gumroad.toggleProduct("my-product-id", false)
 .then(function(product) {
-    // product is disabled
+    // Product has been disabled/enabled
 });
 ```
 
-### Delete a product
-
-Reference: https://gumroad.com/api#products
+#### Delete a product
 
 ```js
 gumroad.deleteProduct("my-product-id")
 .then(function() {
+    // Product has been deleted
+});
+```
+
+## Offer Codes
+
+Reference: https://gumroad.com/api#offer-codes
+
+#### List offers for a product
+
+```js
+gumroad.listOffers("product-id")
+.then(function(offers) {
     ...
 });
 ```
 
-### Verify a license key
+#### Create an offer
+
+```js
+gumroad.createOffer("product-id", {
+    "name": "..."
+})
+.then(function(offer) {
+    ...
+});
+```
+
+#### Retrieve an offer
+
+```js
+gumroad.getOffer("product-id", "offer-id")
+.then(function(offer) {
+    ...
+});
+```
+
+#### Delete an offer
+
+```js
+gumroad.deleteOffer("product-id", "offer-id")
+.then(function() {
+    // Offer has been deleted
+});
+```
+
+#### Update a product
+
+```js
+gumroad.updateOffer("product-id", "offer-id", {
+    // infos
+})
+.then(function(offer) {
+    // Offer has been updated
+});
+```
+
+## Licenses
+
+Reference: https://help.gumroad.com/customer/portal/articles/1579327-license-keys
+
+#### Verify a license key
 
 ```js
 gumroad.verifyLicense("my-product-id", "license-key")
-.then(function() {
-    ...
+.then(function(license) {
+    // License is OK
+}, function() {
+    // License verification failed
 });
 ```
+
+
 
