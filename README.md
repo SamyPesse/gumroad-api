@@ -5,7 +5,7 @@ This is a client library to access the Gumroad API. This client uses promises.
 
 ```js
 var Gumroad = require("gumroad-api");
-var gumroad = new Publisher({
+var gumroad = new Gumroad({
 	token: "<your-gumroad-token>"
 });
 ```
@@ -140,5 +140,24 @@ gumroad.verifyLicense("my-product-id", "license-key")
 });
 ```
 
+## Sales
 
+Reference: https://gumroad.com/api#sales
 
+#### List sales
+
+```js
+gumroad.listSales("after-date", "before-date", "page-num")
+.then(function(sales) {
+    ...
+});
+```
+
+#### Retrieve a sale
+
+```js
+gumroad.getSale("sale-id")
+.then(function(sale) {
+    ...
+});
+```
